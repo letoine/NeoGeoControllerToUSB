@@ -1,0 +1,263 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:NeoGeoController2USB-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "1 aug 2014"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L USB J?
+U 1 1 53DB98C4
+P 2500 3500
+F 0 "J?" H 2450 3900 60  0000 C CNN
+F 1 "USB" V 2250 3650 60  0000 C CNN
+F 2 "" H 2500 3500 60  0000 C CNN
+F 3 "" H 2500 3500 60  0000 C CNN
+	1    2500 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L DB9 J?
+U 1 1 53DB98E4
+P 8600 2350
+F 0 "J?" H 8600 2900 70  0000 C CNN
+F 1 "DB9" H 8600 1800 70  0000 C CNN
+F 2 "" H 8600 2350 60  0000 C CNN
+F 3 "" H 8600 2350 60  0000 C CNN
+	1    8600 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L ATMEGA32U2-AU U?
+U 1 1 53DBB1ED
+P 5500 4700
+F 0 "U?" H 4600 6400 60  0000 C CNN
+F 1 "ATMEGA32U2-AU" H 4850 3150 60  0000 C CNN
+F 2 "~" H 6700 5800 60  0000 C CNN
+F 3 "~" H 6700 5800 60  0000 C CNN
+	1    5500 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRYSTAL X?
+U 1 1 53DBBAE1
+P 3550 5250
+F 0 "X?" H 3550 5400 60  0000 C CNN
+F 1 "CRYSTAL" H 3550 5100 60  0000 C CNN
+F 2 "~" H 3550 5250 60  0000 C CNN
+F 3 "~" H 3550 5250 60  0000 C CNN
+	1    3550 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 53DBBAFE
+P 3750 3850
+F 0 "R?" V 3830 3850 40  0000 C CNN
+F 1 "22ohms" V 3757 3851 40  0000 C CNN
+F 2 "~" V 3680 3850 30  0000 C CNN
+F 3 "~" H 3750 3850 30  0000 C CNN
+	1    3750 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 53DBBB0D
+P 3750 4000
+F 0 "R?" V 3830 4000 40  0000 C CNN
+F 1 "22ohms" V 3757 4001 40  0000 C CNN
+F 2 "~" V 3680 4000 30  0000 C CNN
+F 3 "~" H 3750 4000 30  0000 C CNN
+	1    3750 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 53DC135F
+P 4250 3150
+F 0 "#PWR?" H 4250 3250 30  0001 C CNN
+F 1 "VCC" H 4250 3250 30  0000 C CNN
+F 2 "" H 4250 3150 60  0000 C CNN
+F 3 "" H 4250 3150 60  0000 C CNN
+	1    4250 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 53DC1370
+P 2000 3700
+F 0 "#PWR?" H 2000 3800 30  0001 C CNN
+F 1 "VCC" H 2000 3800 30  0000 C CNN
+F 2 "" H 2000 3700 60  0000 C CNN
+F 3 "" H 2000 3700 60  0000 C CNN
+	1    2000 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 53DC13F7
+P 2000 4100
+F 0 "#PWR?" H 2000 4100 30  0001 C CNN
+F 1 "GND" H 2000 4030 30  0001 C CNN
+F 2 "" H 2000 4100 60  0000 C CNN
+F 3 "" H 2000 4100 60  0000 C CNN
+	1    2000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 53DC147A
+P 3250 5650
+F 0 "#PWR?" H 3250 5650 30  0001 C CNN
+F 1 "GND" H 3250 5580 30  0001 C CNN
+F 2 "" H 3250 5650 60  0000 C CNN
+F 3 "" H 3250 5650 60  0000 C CNN
+	1    3250 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 53DC1489
+P 3850 5650
+F 0 "#PWR?" H 3850 5650 30  0001 C CNN
+F 1 "GND" H 3850 5580 30  0001 C CNN
+F 2 "" H 3850 5650 60  0000 C CNN
+F 3 "" H 3850 5650 60  0000 C CNN
+	1    3850 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 53DC1498
+P 3850 4650
+F 0 "#PWR?" H 3850 4650 30  0001 C CNN
+F 1 "GND" H 3850 4580 30  0001 C CNN
+F 2 "" H 3850 4650 60  0000 C CNN
+F 3 "" H 3850 4650 60  0000 C CNN
+	1    3850 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 3850 2000 3850
+Wire Wire Line
+	2000 3850 2000 4100
+Wire Wire Line
+	2100 3950 2000 3950
+Connection ~ 2000 3950
+Wire Wire Line
+	2100 3700 2000 3700
+Wire Wire Line
+	4000 3850 4250 3850
+Wire Wire Line
+	4250 3950 4000 3950
+Wire Wire Line
+	4000 3950 4000 4000
+Wire Wire Line
+	4250 3150 4250 3750
+Connection ~ 4250 3250
+Connection ~ 4250 3350
+Wire Wire Line
+	4250 4050 3850 4050
+Wire Wire Line
+	3850 4050 3850 4650
+Wire Wire Line
+	2850 3950 2850 4050
+Wire Wire Line
+	2850 4050 2000 4050
+Connection ~ 2000 4050
+Wire Wire Line
+	3500 3850 2850 3850
+Wire Wire Line
+	3500 4000 3150 4000
+Wire Wire Line
+	3150 4000 3150 3700
+Wire Wire Line
+	3150 3700 2850 3700
+$Comp
+L C C?
+U 1 1 53DC158C
+P 4000 4350
+F 0 "C?" H 4000 4450 40  0000 L CNN
+F 1 "1uf" H 4006 4265 40  0000 L CNN
+F 2 "~" H 4038 4200 30  0000 C CNN
+F 3 "~" H 4000 4350 60  0000 C CNN
+	1    4000 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 53DC159B
+P 3250 5450
+F 0 "C?" H 3250 5550 40  0000 L CNN
+F 1 "C" H 3256 5365 40  0000 L CNN
+F 2 "~" H 3288 5300 30  0000 C CNN
+F 3 "~" H 3250 5450 60  0000 C CNN
+	1    3250 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 53DC15AA
+P 3850 5450
+F 0 "C?" H 3850 5550 40  0000 L CNN
+F 1 "C" H 3856 5365 40  0000 L CNN
+F 2 "~" H 3888 5300 30  0000 C CNN
+F 3 "~" H 3850 5450 60  0000 C CNN
+	1    3850 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 5150 4100 5150
+Wire Wire Line
+	4100 5150 4100 4950
+Wire Wire Line
+	4100 4950 3250 4950
+Wire Wire Line
+	3250 4950 3250 5250
+Wire Wire Line
+	4250 5250 3850 5250
+Wire Wire Line
+	4250 4150 4000 4150
+Wire Wire Line
+	4000 4550 3850 4550
+Connection ~ 3850 4550
+$EndSCHEMATC
