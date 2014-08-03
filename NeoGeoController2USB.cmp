@@ -1,0 +1,87 @@
+Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = sam 02 aoû 2014 19:07:57 EDT
+
+BeginCmp
+TimeStamp = /53DC159B;
+Reference = C1;
+ValeurCmp = 22p;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /53DC15AA;
+Reference = C2;
+ValeurCmp = 22p;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /53DD214D;
+Reference = C3;
+ValeurCmp = 100nf;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /53DC158C;
+Reference = C4;
+ValeurCmp = 1uf;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /53DC1AF4;
+Reference = CON1;
+ValeurCmp = AVR-ISP6;
+IdModule  = pin_array_3x2;
+EndCmp
+
+BeginCmp
+TimeStamp = /53DB98C4;
+Reference = J1;
+ValeurCmp = USB;
+IdModule  = USB_B;
+EndCmp
+
+BeginCmp
+TimeStamp = /53DC2004;
+Reference = J2;
+ValeurCmp = DB15;
+IdModule  = DB15FC;
+EndCmp
+
+BeginCmp
+TimeStamp = /53DBBAFE;
+Reference = R1;
+ValeurCmp = 22ohms;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /53DBBB0D;
+Reference = R2;
+ValeurCmp = 22ohms;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /53DC1CB7;
+Reference = R3;
+ValeurCmp = 12K;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /53DBB1ED;
+Reference = U1;
+ValeurCmp = ATMEGA32U2-AU;
+IdModule  = TQFP32;
+EndCmp
+
+BeginCmp
+TimeStamp = /53DBBAE1;
+Reference = X1;
+ValeurCmp = 16Mhz;
+IdModule  = HC-49V;
+EndCmp
+
+EndListe
