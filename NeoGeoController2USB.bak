@@ -284,7 +284,7 @@ L R R3
 U 1 1 53DC1CB7
 P 3950 1950
 F 0 "R3" V 4030 1950 40  0000 C CNN
-F 1 "12K" V 3957 1951 40  0000 C CNN
+F 1 "10K" V 3957 1951 40  0000 C CNN
 F 2 "~" V 3880 1950 30  0000 C CNN
 F 3 "~" H 3950 1950 30  0000 C CNN
 	1    3950 1950
@@ -308,10 +308,6 @@ Text GLabel 6900 3450 2    60   Input ~ 0
 MISO
 Text GLabel 6900 3250 2    60   Input ~ 0
 SCK
-Wire Wire Line
-	6700 3350 7450 3350
-Wire Wire Line
-	6700 3450 6900 3450
 $Comp
 L GND #PWR09
 U 1 1 53DC1F3B
@@ -424,63 +420,35 @@ Wire Wire Line
 	3250 3600 3250 3950
 Wire Wire Line
 	3250 3950 3500 3950
-Text GLabel 7450 4800 2    60   Input ~ 0
+Text GLabel 6900 4150 2    60   Input ~ 0
 UP
-Wire Wire Line
-	7450 4800 6700 4800
-Text GLabel 6900 4900 2    60   Input ~ 0
+Text GLabel 6900 4800 2    60   Input ~ 0
 DOWN
-Text GLabel 7450 5000 2    60   Input ~ 0
+Text GLabel 7450 4900 2    60   Input ~ 0
 LEFT
-Text GLabel 6900 5100 2    60   Input ~ 0
+Text GLabel 6900 5000 2    60   Input ~ 0
 RIGHT
-Text GLabel 7450 5200 2    60   Input ~ 0
+Text GLabel 7450 5100 2    60   Input ~ 0
 A_BUTTON
-Text GLabel 6900 5300 2    60   Input ~ 0
+Text GLabel 6900 5200 2    60   Input ~ 0
 B_BUTTON
-Text GLabel 7450 5400 2    60   Input ~ 0
+Text GLabel 7450 5300 2    60   Input ~ 0
 C_BUTTON
-Text GLabel 6900 5500 2    60   Input ~ 0
+Text GLabel 6900 5400 2    60   Input ~ 0
 D_BUTTON
-Wire Wire Line
-	6900 4900 6700 4900
-Wire Wire Line
-	6900 5100 6700 5100
-Wire Wire Line
-	7450 5200 6700 5200
-Wire Wire Line
-	6900 5300 6700 5300
-Wire Wire Line
-	7450 5400 6700 5400
-Wire Wire Line
-	6900 5500 6700 5500
-Wire Wire Line
-	7450 5000 6700 5000
-Text GLabel 7450 3150 2    60   Input ~ 0
+Text GLabel 7450 5500 2    60   Input ~ 0
 START
-Text GLabel 7450 3550 2    60   Input ~ 0
+Text GLabel 7450 3150 2    60   Input ~ 0
 SELECT
-Text GLabel 6900 3650 2    60   Input ~ 0
-KICK_3
 Text GLabel 7450 3750 2    60   Input ~ 0
+KICK_3
+Text GLabel 7450 3550 2    60   Input ~ 0
 KICK_1
-Text GLabel 6900 3850 2    60   Input ~ 0
+Text GLabel 6900 3650 2    60   Input ~ 0
 D_KICK_2
-Wire Wire Line
-	6700 3150 7450 3150
-Wire Wire Line
-	6700 3550 7450 3550
-Wire Wire Line
-	6700 3650 6900 3650
-Wire Wire Line
-	6700 3750 7450 3750
-Wire Wire Line
-	6700 3850 6900 3850
-NoConn ~ 6700 4150
 NoConn ~ 6700 4350
 NoConn ~ 6700 4450
 NoConn ~ 6700 4550
-NoConn ~ 6700 4650
 $Comp
 L C C3
 U 1 1 53DD214D
@@ -494,8 +462,6 @@ F 3 "~" H 3750 3050 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	3750 4050 3750 4400
-Wire Wire Line
-	6900 3250 6700 3250
 Wire Wire Line
 	2000 3750 2100 3750
 $Comp
@@ -528,4 +494,60 @@ Wire Wire Line
 	5600 2300 5600 2200
 Wire Wire Line
 	5600 2200 5400 2200
+Wire Wire Line
+	6700 4800 6900 4800
+Wire Wire Line
+	6700 4900 7450 4900
+Wire Wire Line
+	6700 5000 6900 5000
+Wire Wire Line
+	6700 5100 7450 5100
+Wire Wire Line
+	6700 5200 6900 5200
+Wire Wire Line
+	6700 5300 7450 5300
+Wire Wire Line
+	6700 5400 6900 5400
+Wire Wire Line
+	6700 5500 7450 5500
+Wire Wire Line
+	6700 4150 6900 4150
+NoConn ~ 6700 4650
+Wire Wire Line
+	6700 3150 7450 3150
+Wire Wire Line
+	6700 3250 6900 3250
+Wire Wire Line
+	6700 3350 7450 3350
+Wire Wire Line
+	6700 3450 6900 3450
+NoConn ~ 6700 3850
+Wire Wire Line
+	6700 3550 7450 3550
+Wire Wire Line
+	6700 3650 6900 3650
+Wire Wire Line
+	6700 3750 7450 3750
+$Comp
+L C C5
+U 1 1 53DE7D03
+P 3950 2400
+F 0 "C5" H 3950 2500 40  0000 L CNN
+F 1 "100nf" H 3956 2315 40  0000 L CNN
+F 2 "~" H 3988 2250 30  0000 C CNN
+F 3 "~" H 3950 2400 60  0000 C CNN
+	1    3950 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR013
+U 1 1 53DE7D12
+P 3950 2600
+F 0 "#PWR013" H 3950 2600 30  0001 C CNN
+F 1 "GND" H 3950 2530 30  0001 C CNN
+F 2 "" H 3950 2600 60  0000 C CNN
+F 3 "" H 3950 2600 60  0000 C CNN
+	1    3950 2600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
