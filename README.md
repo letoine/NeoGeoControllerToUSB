@@ -32,3 +32,22 @@ pin |    function    | comment
 14  | Left           | 
 15  | Up             | 
 
+
+ATMega pins/Controller mapping
+=========================
+
+ IO | button
+----|-------
+PB0 | Start
+PB4 | Select
+PB5 | Kick_3
+PB6 | Kick_1
+PB7 | D/Kick_2
+PD0 | Up
+PD1 | Down
+PD2 | Left
+PD3 | Right
+PD4 | A
+PD5 | B
+PD6 | C
+PD7 | D
