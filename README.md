@@ -14,40 +14,51 @@ Some superguns uses a DB15 for the controller with a compatible pinout. These
 superguns are using the non-connected pins to support games with more than
 four buttons, like capcom games using the kick-harness.
 
+DB15 pinout controller
+-------------------------
+\ 1 2  3  4  5  6  7  8 /
+ \ 9 10 11 12 13 14 15 /
+  --------------------
+
+
 pin |    function    | comment
 ----|----------------|--------------
- 1  | GND            | 
- 2  | NC/Kick1       | Not connected on NeoGeo, used for kick in superguns.
- 3  | Select         |
- 4  | D button       |
- 5  | B button       | 
- 6  | Right          |
- 7  | Down           |
- 8  | +5V            |
- 9  | D button/Kick2 | Not read by console, used for kick in superguns.
-10  | NC/Kick3       | Not connected on NeoGeo, used for kick in superguns.
-11  | Start          | 
+ 1  | +5V            |
+ 2  | Down           |
+ 3  | Right          |
+ 4  | B button       | 
+ 5  | D button       |
+ 6  | Select         |
+ 7  | NC/Kick1       | Not connected on NeoGeo, used for kick in superguns.
+ 8  | GND            | 
+ 9  | Up             | 
+10  | Left           | 
+11  | A button       | 
 12  | C button       | 
-13  | A button       | 
-14  | Left           | 
-15  | Up             | 
+13  | Start          | 
+14  | NC/Kick3       | Not connected on NeoGeo, used for kick in superguns.
+15  | D button/Kick2 | Not read by console, used for kick in superguns.
 
 
 ATMega pins/Controller mapping
 =========================
 
- IO | button
-----|-------
-PB0 | Start
-PB4 | Select
-PB5 | Kick_3
-PB6 | Kick_1
-PB7 | D/Kick_2
-PD0 | Up
-PD1 | Down
-PD2 | Left
-PD3 | Right
-PD4 | A
-PD5 | B
-PD6 | C
-PD7 | D
+ IO | DB-Pin |  button
+----|--------|--------
+PB0 |    4   |  B
+PB1 |   12   |  C
+PB2 |    5   |  D
+PB3 |    6   |  Select
+PB4 |   13   |  Start
+PB5 |    7   |  Kick_1
+PB6 |   14   |  Kick_3
+PB7 |   15   |  D/Kick_2
+PC2 |   11   |  A
+PD0 |   10   |  Left
+PD1 |    9   |  Up
+PD2 |    -   |   -
+PD3 |    -   |   -
+PD4 |    2   |  Down
+PD5 |    3   |  Right
+PD6 |    -   |   -
+PD7 |    -   |   -

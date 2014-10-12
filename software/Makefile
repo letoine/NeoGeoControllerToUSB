@@ -18,9 +18,10 @@ F_CPU        = 16000000
 F_USB        = $(F_CPU)
 OPTIMIZATION = s
 TARGET       = Joystick
-SRC          = $(TARGET).c Descriptors.c $(LUFA_SRC_USB) $(LUFA_SRC_USBCLASS)
 #LUFA_PATH    = ../../../../LUFA
 LUFA_PATH    = /home/antoine/Bureau/Projects/lufa-LUFA-140302/LUFA
+SRC          = $(TARGET).c Descriptors.c $(LUFA_SRC_USB) $(LUFA_SRC_USBCLASS) \
+		$(LUFA_PATH)/Drivers/Peripheral/$(ARCH)/Serial_$(ARCH).c
 CC_FLAGS     = -DUSE_LUFA_CONFIG_HEADER -IConfig/
 LD_FLAGS     =
 

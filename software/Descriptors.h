@@ -2,8 +2,10 @@
 #define _DESCRIPTORS_H_
 
 #include <avr/pgmspace.h>
+#include <stdio.h>
 
 #include <LUFA/Drivers/USB/USB.h>
+#include <LUFA/Drivers/Peripheral/Serial.h>
 
 typedef struct {
   USB_Descriptor_Configuration_Header_t Config;

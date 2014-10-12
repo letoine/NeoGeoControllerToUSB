@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = dim 03 aoû 2014 14:24:23 EDT
+Cmp-Mod V01 Created by CvPcb (22-Jun-2014 BZR 4027)-stable date = sam 20 sep 2014 10:53:16 EDT
 
 BeginCmp
 TimeStamp = /53DC159B;
@@ -39,7 +39,14 @@ BeginCmp
 TimeStamp = /53DC1AF4;
 Reference = CON1;
 ValeurCmp = AVR-ISP6;
-IdModule  = pin_array_3x2;
+IdModule  = avr_isp_6;
+EndCmp
+
+BeginCmp
+TimeStamp = /541C9E9E;
+Reference = CON2;
+ValeurCmp = TTL_6;
+IdModule  = SIL-6;
 EndCmp
 
 BeginCmp
@@ -75,6 +82,34 @@ TimeStamp = /53DC1CB7;
 Reference = R3;
 ValeurCmp = 10K;
 IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /541D92A2;
+Reference = R4;
+ValeurCmp = 22ohms;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /541D9310;
+Reference = R5;
+ValeurCmp = 22ohms;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /541D9316;
+Reference = R6;
+ValeurCmp = 22ohms;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /541C3B0C;
+Reference = SW1;
+ValeurCmp = SW_PUSH;
+IdModule  = SW_PUSH_SMALL;
 EndCmp
 
 BeginCmp

@@ -1,0 +1,77 @@
+PCBNEW-LibModule-V1  ven 19 sep 2014 12:09:32 EDT
+# encoding utf-8
+Units mm
+$INDEX
+avr_isp_6
+$EndINDEX
+$MODULE avr_isp_6
+Po 0 0 0 15 541C5534 00000000 ~~
+Li avr_isp_6
+Cd Double rangee de contacts 2 x 4 pins
+Kw CONN
+Sc 0
+AR 
+Op 0 0 0
+T0 -1.524 -5.08 1.016 1.016 0 0.2032 N V 21 N "AVR_ISP_6"
+T1 -2.54 5.08 1.016 1.016 0 0.2032 N I 21 N "Val**"
+DS -4.064 -1.27 -4.064 -4.064 0.15 21
+DS -4.064 -4.064 1.524 -4.064 0.15 21
+DS 1.524 -4.064 1.524 4.064 0.15 21
+DS 1.524 4.064 -4.064 4.064 0.15 21
+DS -4.064 4.064 -4.064 1.27 0.15 21
+T2 3.302 2.54 1 1 0 0.15 N V 21 N "GND"
+T2 -5.842 2.54 1 1 0 0.15 N V 21 N "RST"
+T2 3.556 0 1 1 0 0.15 N V 21 N "MOSI"
+T2 -5.842 0 1 1 0 0.15 N V 21 N "SCK"
+T2 3.302 -2.54 1 1 0 0.15 N V 21 N "VCC"
+T2 -6.096 -2.54 1 1 0 0.15 N V 21 N "MISO"
+$PAD
+Sh "1" R 1.524 1.524 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -2.54 -2.54
+$EndPAD
+$PAD
+Sh "2" C 1.524 1.524 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 -2.54
+$EndPAD
+$PAD
+Sh "3" C 1.524 1.524 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -2.54 0
+$EndPAD
+$PAD
+Sh "4" C 1.524 1.524 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "5" C 1.524 1.524 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -2.54 2.54
+$EndPAD
+$PAD
+Sh "6" C 1.524 1.524 0 0 0
+Dr 1.016 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 2.54
+$EndPAD
+$SHAPE3D
+Na "pin_array/pins_array_3x2.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE avr_isp_6
+$EndLIBRARY
