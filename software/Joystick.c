@@ -71,7 +71,7 @@ int main(void) {
   }
 }
 
-FILE debugSerial;
+
 
 void SetupHardware(void) {
   /* Disable watchdog if enabled by bootloader/fuses */
@@ -94,27 +94,26 @@ void SetupHardware(void) {
   DDRD = 0xFF;
   PORTD = 0x33;
   
-  Serial_Init(9600, false);
-  Serial_CreateStream(&debugSerial);
+  SerialDebug_init();
   USB_Init();
 }
 
 void EVENT_USB_Device_ConfigurationChanged(void) {
   bool ConfigSuccess = true;
   
-  Serial_SendString("EVENT_USB_Device_ConfigurationChanged\r\n");
+  SerialDebug_printf("EVENT_USB_Device_ConfigurationChanged\r\n");
   ConfigSuccess &= HID_Device_ConfigureEndpoints(&Joystick_HID_Interface);
   
   USB_Device_EnableSOFEvents();
 }
 
 void EVENT_USB_Device_ControlRequest(void) {
-  Serial_SendString("EVENT_USB_Device_ControlRequest\r\n");
+  SerialDebug_printf("EVENT_USB_Device_ControlRequest\r\n");
   HID_Device_ProcessControlRequest(&Joystick_HID_Interface);
 }
 
 void EVENT_USB_Device_StartOfFrame(void) {
-  //Serial_SendString("EVENT_USB_Device_StartOfFrame\r\n");
+  //SerialDebug_printf("EVENT_USB_Device_StartOfFrame\r\n");
   HID_Device_MillisecondElapsed(&Joystick_HID_Interface);
 }
 
@@ -150,13 +149,13 @@ bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDIn
     JoystickReport->X =  127;
   
   if (!cport.a_button)
-    JoystickReport->button.cross = 1;
+    JoystickReport->button.square = 1;
   
   if (!bport.b_button)
-    JoystickReport->button.circle = 1;
+    JoystickReport->button.cross = 1;
   
   if (!bport.c_button)
-    JoystickReport->button.square = 1;
+    JoystickReport->button.circle = 1;
   
   if (!bport.d_button)
     JoystickReport->button.triangle = 1;
@@ -170,17 +169,24 @@ bool CALLBACK_HID_Device_CreateHIDReport(USB_ClassInfo_HID_Device_t* const HIDIn
   if (!bport.start && !bport.select)
     JoystickReport->button.home = 1;
   
+  if (!bport.kick1) {
+    JoystickReport->button.l1 = 1;
+  }
+  
+  if (!!bport.kick3) {
+    JoystickReport->button.r1 = 1;
+  }
+  
+  if (bport.d_button != bport.d_kick2) {
+    status.is_neo_geo_stick = 0;
+  }
+  
+  if (status.is_neo_geo_stick == 0 && !bport.d_kick2) {
+    JoystickReport->button.r2 = 1;
+  }
+  
   *ReportSize = sizeof(USB_JoystickReport_Data_t);
   return false;
-}
-
-inline void printArray(uint8_t* ReportData,
-		       uint16_t ReportSize) {
-  while (ReportSize) {
-    fprintf(&debugSerial, "%#0x\r\n", *ReportData);
-    ReportData++;
-    ReportSize--;
-  }
 }
 
 void CALLBACK_HID_Device_ProcessHIDReport(USB_ClassInfo_HID_Device_t* const HIDInterfaceInfo,
@@ -189,9 +195,9 @@ void CALLBACK_HID_Device_ProcessHIDReport(USB_ClassInfo_HID_Device_t* const HIDI
                                           const void* ReportData,
                                           const uint16_t ReportSize)
 {
-  Serial_SendString("CALLBACK_HID_Device_ProcessHIDReport\r\n");
-  fprintf(&debugSerial, "%#0x, %#0x\r\n", ReportID, ReportType);
-  printArray(ReportData, ReportSize);
+  SerialDebug_printf("CALLBACK_HID_Device_ProcessHIDReport\r\n");
+  SerialDebug_printf("%#0x, %#0x\r\n", ReportID, ReportType);
+  SerialDebug_printByteArray(ReportData, ReportSize);
   
   // Unused (but mandatory for the HID class driver) in this demo, since there are no Host->Device reports
 }

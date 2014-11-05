@@ -108,17 +108,6 @@ const USB_Descriptor_String_t PROGMEM ManufacturerString = USB_STRING_DESCRIPTOR
 
 const USB_Descriptor_String_t PROGMEM ProductString = USB_STRING_DESCRIPTOR(L"NeoGeo controller to USB adapter");
 
-/*
- * Series of bytes that appear in control packets right after the HID
- * descriptor is sent to the host. They where discovered by tracing output
- * from a Madcatz SF4 Joystick. Sending these bytes makes the PS button work.
- */
-const uint8_t PROGMEM magic_init_bytes[] = {
-	0x21, 0x26, 0x01, 0x07, 0x00, 0x00, 0x00, 0x00
-};
-
-extern FILE debugSerial;
-
 uint16_t CALLBACK_USB_GetDescriptor(const uint16_t wValue,
                                     const uint8_t wIndex,
                                     const void** const DescriptorAddress)
@@ -129,8 +118,8 @@ uint16_t CALLBACK_USB_GetDescriptor(const uint16_t wValue,
   const void* Address = NULL;
   uint16_t    Size    = NO_DESCRIPTOR;
   
-  Serial_SendString("CALLBACK_USB_GetDescriptor\r\n");
-  fprintf(&debugSerial, "%#0x, %#0x\r\n", DescriptorType, DescriptorNumber);
+  SerialDebug_printf("CALLBACK_USB_GetDescriptor\r\n");
+  SerialDebug_printf("%#0x, %#0x\r\n", DescriptorType, DescriptorNumber);
   switch (DescriptorType) {
   case DTYPE_Device:
     Address = &DeviceDescriptor;
@@ -158,10 +147,8 @@ uint16_t CALLBACK_USB_GetDescriptor(const uint16_t wValue,
     
     break;
   case HID_DTYPE_HID:
-    //Address = &ConfigurationDescriptor.HID_JoystickHID;
-    //Size    = sizeof(USB_HID_Descriptor_HID_t);
-    Address = &magic_init_bytes;
-    Size    = sizeof(magic_init_bytes);
+    Address = &ConfigurationDescriptor.HID_JoystickHID;
+    Size    = sizeof(USB_HID_Descriptor_HID_t);
     break;
   case HID_DTYPE_Report:
     Address = &JoystickReport;

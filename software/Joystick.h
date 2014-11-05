@@ -5,14 +5,13 @@
 #include <avr/wdt.h>
 #include <avr/power.h>
 #include <avr/interrupt.h>
-#include <stdio.h>
 #include <string.h>
 
 #include "Descriptors.h"
 
 #include <LUFA/Drivers/USB/USB.h>
 #include <LUFA/Platform/Platform.h>
-#include <LUFA/Drivers/Peripheral/Serial.h>
+#include "SerialDebug.h"
 
 typedef struct {
   int8_t  X;

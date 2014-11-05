@@ -19,11 +19,14 @@ F_USB        = $(F_CPU)
 OPTIMIZATION = s
 TARGET       = Joystick
 #LUFA_PATH    = ../../../../LUFA
-LUFA_PATH    = /home/antoine/Bureau/Projects/lufa-LUFA-140302/LUFA
-SRC          = $(TARGET).c Descriptors.c $(LUFA_SRC_USB) $(LUFA_SRC_USBCLASS) \
-		$(LUFA_PATH)/Drivers/Peripheral/$(ARCH)/Serial_$(ARCH).c
+LUFA_PATH    = $(HOME)/Desktop/Projects/lufa-LUFA-140302/LUFA
+SRC          = $(TARGET).c Descriptors.c $(LUFA_SRC_USB) $(LUFA_SRC_USBCLASS)
 CC_FLAGS     = -DUSE_LUFA_CONFIG_HEADER -IConfig/
 LD_FLAGS     =
+
+# uncomment following lines to enable Debug messages on serial port
+#CC_FLAGS    += -D_SERIAL_DEBUG
+#SRC	     += SerialDebug.c $(LUFA_PATH)/Drivers/Peripheral/$(ARCH)/Serial_$(ARCH).c
 
 # Default target
 all:
