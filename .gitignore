@@ -9,3 +9,11 @@
 *.elf
 *.bin
 *.lss
+
+*.bak
+*.kicad_pcb-bak
+*.bck
+*.lst
+*.net
+*.dsn
+*.ses
